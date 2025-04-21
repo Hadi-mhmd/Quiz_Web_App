@@ -62,9 +62,9 @@ function check() {
         alert('You are logged in.');
 
         if (foundUser.role === 'admin') {
-            window.location.href = "../admin.html";  
+            window.location.href = "admin.html";  
         } else {
-            window.location.href = "../quiz_home.html";
+            window.location.href = "quiz_home.html";
         }
     } else {
         alert('Error on login');
