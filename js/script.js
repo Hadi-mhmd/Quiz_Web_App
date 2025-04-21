@@ -19,7 +19,7 @@ function loadQuizzes() {
         // When the user clicks a quiz, store its ID in localStorage and navigate to quiz.html
         quizElement.addEventListener('click', () => {
             localStorage.setItem('selectedQuizId', quiz.id);
-            window.location.href = 'quiz.html';
+            window.location.href = '/Quiz_Web_App/quiz.html';
         });
         
         quizListDiv.appendChild(quizElement);
