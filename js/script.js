@@ -1,8 +1,16 @@
-// Function to load quizzes from localStorage and display them on the homepage
+
 function loadQuizzes() {
     const quizzes = JSON.parse(localStorage.getItem('quizzes')) || [];
     const quizListDiv = document.getElementById('quiz-list');
     
+ 
+    const username = localStorage.getItem('name');
+    const userNameWithoutEmail = username.split('@')[0];
+
+    
+    const welcomeMessageDiv = document.getElementById('welcome-message');
+    welcomeMessageDiv.innerText = `Welcome, ${userNameWithoutEmail}!`;
+
     quizzes.forEach((quiz) => {
         const quizElement = document.createElement('div');
         quizElement.classList.add('quiz-item');

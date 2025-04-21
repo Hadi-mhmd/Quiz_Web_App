@@ -1,3 +1,7 @@
+// Ensure quizzes exist when registering
+if (!localStorage.getItem('quizzes')) {
+    initializeQuizzes();
+}
 
 function store() {
     var name = document.getElementById('name').value;
@@ -60,7 +64,7 @@ function check() {
         if (foundUser.role === 'admin') {
             window.location.href = "../admin.html";  
         } else {
-            window.location.href = "../quiz.html";
+            window.location.href = "../quiz_home.html";
         }
     } else {
         alert('Error on login');

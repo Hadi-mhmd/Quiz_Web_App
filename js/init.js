@@ -113,8 +113,7 @@ function initializeQuizzes() {
     localStorage.setItem('quizzes', JSON.stringify(quizzes));
 }
 
-// Uncomment this once to initialize quizzes
-initializeQuizzes();
+
 
 function initializeUsers() {
     const existingUsers = JSON.parse(localStorage.getItem('users'));
@@ -123,3 +122,4 @@ function initializeUsers() {
     }
 }
 initializeUsers();
+initializeQuizzes();
